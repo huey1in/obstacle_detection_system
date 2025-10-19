@@ -1,0 +1,10 @@
+{
+  "model_architecture": "YOLOv5",
+  "trained_on": "COCO dataset",
+  "epoch": 300,
+  "batch_size": 16,
+  "learning_rate": 0.001,
+  "optimizer": "SGD",
+  "mAP": 0.456,
+  "timestamp": "2022-11-22"
+}

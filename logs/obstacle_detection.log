@@ -1,0 +1,53 @@
+2025-10-19 22:07:34,496 - root - INFO - 日志系统已初始化，日志文件: ./logs\obstacle_detection.log
+2025-10-19 22:07:34,496 - __main__ - INFO - ============================================================
+2025-10-19 22:07:34,496 - __main__ - INFO - 视障人群AI前方障碍物识别系统启动
+2025-10-19 22:07:34,496 - __main__ - INFO - 运行模式: 窗口显示模式
+2025-10-19 22:07:34,496 - __main__ - INFO - ============================================================
+2025-10-19 22:07:34,496 - __main__ - INFO - 初始化摄像头...
+2025-10-19 22:07:34,951 - src.camera.camera - INFO - 摄像头初始化成功: 640x480@30fps
+2025-10-19 22:07:34,952 - __main__ - INFO - 初始化图像预处理器...
+2025-10-19 22:07:34,952 - __main__ - INFO - 初始化AI模型...
+2025-10-19 22:07:34,952 - src.model.inference - INFO - 使用MindIE推理引擎，设备: Ascend
+2025-10-19 22:07:34,952 - src.model.inference - INFO - 使用 ONNX 模型: c:\Users\29269\Desktop\昇腾\src\model\..\..\models\yolov5s_real.onnx
+2025-10-19 22:07:35,117 - src.model.inference - INFO - ONNX 模型加载成功: c:\Users\29269\Desktop\昇腾\src\model\..\..\models\yolov5s_real.onnx
+2025-10-19 22:07:35,117 - __main__ - INFO - 初始化检测器...
+2025-10-19 22:07:35,118 - __main__ - INFO - 初始化语音播报...
+2025-10-19 22:07:35,188 - comtypes.client._code_cache - INFO - Imported existing <module 'comtypes.gen' from 'C:\\Users\\29269\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python311\\site-packages\\comtypes\\gen\\__init__.py'>
+2025-10-19 22:07:35,189 - comtypes.client._code_cache - INFO - Using writeable comtypes cache directory: 'C:\Users\29269\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\comtypes\gen'
+2025-10-19 22:07:35,416 - src.voice.tts - INFO - pyttsx3引擎初始化成功
+2025-10-19 22:07:35,416 - __main__ - INFO - 所有模块初始化成功
+2025-10-19 22:07:35,417 - __main__ - INFO - 系统开始运行，按 Ctrl+C 退出
+2025-10-19 22:07:35,841 - src.voice.tts - INFO - 播报: 前方安全，可以继续前进
+2025-10-19 22:07:35,995 - src.voice.tts - INFO - 播报: 危险！railing距离1.8米
+2025-10-19 22:07:38,792 - src.voice.tts - INFO - 播报: 危险！person距离0.7米
+2025-10-19 22:07:38,886 - src.voice.tts - INFO - 播报: 危险！unknown距离0.6米
+2025-10-19 22:07:38,900 - __main__ - INFO - 处理帧数: 30, 检测到 1 个障碍物
+2025-10-19 22:07:38,992 - src.voice.tts - INFO - 播报: 危险！person距离0.6米
+2025-10-19 22:07:40,300 - src.voice.tts - INFO - 播报: 危险！person距离0.6米
+2025-10-19 22:07:41,863 - __main__ - INFO - 处理帧数: 60, 检测到 0 个障碍物
+2025-10-19 22:07:41,961 - src.voice.tts - INFO - 播报: 前方安全，可以继续前进
+2025-10-19 22:07:42,542 - src.voice.tts - INFO - 播报: 危险！unknown距离0.8米
+2025-10-19 22:07:42,652 - src.voice.tts - INFO - 播报: 危险！unknown距离0.8米
+2025-10-19 22:07:42,750 - src.voice.tts - INFO - 播报: 危险！unknown距离0.8米
+2025-10-19 22:07:43,148 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:43,336 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:43,623 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:43,723 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:44,117 - src.voice.tts - INFO - 播报: 危险！person距离0.9米
+2025-10-19 22:07:44,210 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:44,305 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:44,501 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:44,603 - src.voice.tts - INFO - 播报: 危险！person距离0.9米
+2025-10-19 22:07:44,799 - src.voice.tts - INFO - 播报: 危险！unknown距离0.9米
+2025-10-19 22:07:44,826 - __main__ - INFO - 处理帧数: 90, 检测到 1 个障碍物
+2025-10-19 22:07:44,929 - src.voice.tts - INFO - 播报: 危险！person距离0.9米
+2025-10-19 22:07:46,788 - __main__ - INFO - 
+收到信号，系统正在退出...
+2025-10-19 22:07:46,789 - __main__ - INFO - 清理系统资源...
+2025-10-19 22:07:47,286 - src.camera.camera - INFO - 摄像头已释放
+2025-10-19 22:07:47,289 - src.model.inference - INFO - 模型资源已释放
+2025-10-19 22:07:47,292 - __main__ - INFO - 显示窗口已关闭
+2025-10-19 22:07:47,293 - __main__ - INFO - 系统已安全退出
+2025-10-19 22:07:47,293 - __main__ - INFO - ============================================================
+2025-10-19 22:07:47,301 - src.camera.camera - INFO - 摄像头已释放
+2025-10-19 22:07:47,301 - src.model.inference - INFO - 模型资源已释放

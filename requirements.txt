@@ -1,0 +1,34 @@
+# Python依赖包列表
+
+# 核心依赖
+numpy>=1.21.0                  # 数值计算
+opencv-python>=4.5.0          # 图像处理
+PyYAML>=5.4.1                 # 配置文件解析
+
+# 深度学习框架
+# MindSpore需要根据具体硬件平台安装，建议在目标设备上安装
+# pip install mindspore  # for CPU
+# pip install mindspore  # for Ascend (on device)
+
+# 语音合成
+pyttsx3>=2.90                 # 本地TTS引擎
+# edge-tts>=6.1.1             # 在线TTS引擎（可选）
+
+# 日志和监控
+python-json-logger>=2.0.2     # JSON格式日志
+
+# 开发工具
+pytest>=6.2.0                 # 单元测试框架
+pytest-cov>=2.12.0            # 代码覆盖率
+black>=21.0                   # 代码格式化
+flake8>=3.9.0                 # 代码检查
+pylint>=2.8.0                 # 代码质量检查
+
+# 可选依赖
+Pillow>=8.2.0                 # 图像处理（可选）
+scipy>=1.6.0                  # 科学计算（可选）
+scikit-image>=0.18.0          # 图像处理算法（可选）
+
+# 文档生成（可选）
+# Sphinx>=4.0.0
+# sphinx-rtd-theme>=1.0.0

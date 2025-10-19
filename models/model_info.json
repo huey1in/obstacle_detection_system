@@ -1,0 +1,17 @@
+{
+  "model_name": "YOLOv5s - Obstacle Detection",
+  "framework": "PyTorch converted to ONNX",
+  "input_shape": [
+    1,
+    3,
+    640,
+    640
+  ],
+  "output_shape": [
+    1,
+    25200,
+    85
+  ],
+  "classes": 80,
+  "accuracy": "mAP50: 45.6%"
+}

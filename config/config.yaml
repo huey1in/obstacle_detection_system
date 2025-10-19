@@ -1,0 +1,88 @@
+# 配置文件
+
+# 系统基础配置
+system:
+  name: "AI Obstacle Detection System"
+  version: "1.0.0"
+  debug: true
+  log_level: "INFO"
+  log_dir: "./logs"
+
+# 摄像头配置
+camera:
+  device_id: 0              # 摄像头设备ID
+  frame_width: 640          # 帧宽度
+  frame_height: 480         # 帧高度
+  fps: 30                   # 帧率
+  flip_horizontal: false    # 是否水平翻转
+  brightness: 0             # 亮度调整
+
+# 图像预处理配置
+preprocess:
+  normalize: true           # 是否进行归一化
+  mean: [0.485, 0.456, 0.406]
+  std: [0.229, 0.224, 0.225]
+  input_size: [640, 640]    # 模型输入尺寸
+  convert_to_rgb: true      # BGR转RGB
+
+# 模型配置
+model:
+  type: "yolov5"            # 模型类型（yolov5, faster_rcnn等）
+  model_path: "models/obstacle_detection_model.mindir"
+  weight_path: "models/obstacle_detection_model.ckpt"
+  use_mindspore: true       # 使用MindSpore框架
+  use_mindie: true          # 使用MindIE推理引擎
+  device: "Ascend"          # 设备类型（Ascend为昇腾）
+  device_id: 0              # 设备ID
+
+# 检测配置
+detection:
+  confidence_threshold: 0.5  # 置信度阈值
+  nms_threshold: 0.45       # NMS阈值
+  max_detections: 10        # 最大检测数量
+  distance_method: "stereo"  # 距离计算方法
+  dangerous_distance: 2.0    # 危险距离阈值（米）
+  warning_distance: 3.5      # 警告距离阈值（米）
+
+# 障碍物类别配置
+obstacle_classes:
+  - "person"           # 行人
+  - "pole"             # 柱子
+  - "tree"             # 树木
+  - "wall"             # 墙壁
+  - "stairs"           # 楼梯
+  - "step"             # 台阶
+  - "hole"             # 坑洞
+  - "vehicle"          # 车辆
+  - "railing"          # 栏杆
+  - "other"            # 其他
+
+# 语音配置
+voice:
+  tts_engine: "pyttsx3"     # TTS引擎（pyttsx3, edge-tts）
+  language: "zh-CN"         # 语言
+  speaker_rate: 150         # 语速（字/分钟）
+  volume: 1.0               # 音量（0-1）
+  enable_audio: true        # 是否启用语音播报
+  announcement_format: "{class} 距离 {distance}米"
+
+# 性能优化配置
+optimization:
+  enable_gpu_acceleration: true   # 使用GPU加速
+  enable_quantization: true       # 模型量化
+  batch_size: 1                   # 批处理大小
+  num_threads: 4                  # 线程数
+
+# 数据记录配置
+logging:
+  save_detections: true           # 保存检测结果
+  save_video: false               # 保存视频
+  save_interval: 30               # 保存间隔（帧数）
+  output_dir: "./outputs"
+
+# 边缘计算配置（昇腾开发板）
+ascend_config:
+  soc_version: "Ascend910"        # SoC版本
+  precision_mode: "force_fp32"    # 精度模式
+  enable_data_pre_process: true
+  enable_dynamic_shape: false
